@@ -1,0 +1,40 @@
+CREATE DATABASE hr_analytics;
+
+CREATE TABLE hr_employees (
+    Age INT,
+    Attrition INT,
+    BusinessTravel VARCHAR(50),
+    DailyRate INT,
+    Department VARCHAR(50),
+    DistanceFromHome INT,
+    Education INT,
+    EducationField VARCHAR(50),
+    EnvironmentSatisfaction INT,
+    Gender VARCHAR(10),
+    HourlyRate INT,
+    JobInvolvement INT,
+    JobLevel INT,
+    JobRole VARCHAR(50),
+    JobSatisfaction INT,
+    MaritalStatus VARCHAR(20),
+    MonthlyIncome INT,
+    MonthlyRate INT,
+    NumCompaniesWorked INT,
+    OverTime INT,
+    PercentSalaryHike INT,
+    PerformanceRating INT,
+    RelationshipSatisfaction INT,
+    StockOptionLevel INT,
+    TotalWorkingYears INT,
+    TrainingTimesLastYear INT,
+    WorkLifeBalance INT,
+    YearsAtCompany INT,
+    YearsInCurrentRole INT,
+    YearsSinceLastPromotion INT,
+    YearsWithCurrManager INT,
+    AgeGroup VARCHAR(10),
+    SalaryBand VARCHAR(10),
+    TenureBracket VARCHAR(10)
+);
+
+---- Further used opttion import CSV in Postgres_sql ----
