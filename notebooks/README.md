@@ -8,7 +8,7 @@
 
 | Property | Detail |
 |----------|--------|
-| **Tool** | Python 3.9+ |
+| **Tool** | Python |
 | **Libraries** | Pandas, NumPy, Matplotlib, Seaborn |
 | **Input** | `../data/hr_raw.csv` (1,470 rows, 35 columns) |
 | **Output** | `../data/hr_cleaned.csv` + 7 chart PNGs |

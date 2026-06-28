@@ -140,31 +140,16 @@ Business Requirement Document (BRD)
 | 🗄️ SQL Analysis | [scripts/README.md](scripts/README.md) |
 | 📊 Power BI Dashboard | [dashboard/README.md](dashboard/README.md) |
 
----
-
-## 🚀 How to Run
-
-```bash
-# Python
-pip install pandas numpy matplotlib seaborn
-# Open notebooks/hr_analysis.ipynb
-
-# PostgreSQL
-CREATE DATABASE hr_analytics;
-# Import hr_cleaned.csv → run scripts/hr_analysis.sql
-
-# Power BI
-# Open dashboard/hr_dashboard.pbix → update data source path → Refresh
-```
 
 ---
 
-## 👤 Author
+## 🛸 Creator
 
-**Yash Awasthi**
-BCA (AI & Data Science)
-
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-blue)](https://linkedin.com/in/yashawasthi27)
-[![GitHub](https://img.shields.io/badge/GitHub-Follow-black)](https://github.com/yashawasthi27)
-[![Portfolio](https://img.shields.io/badge/Portfolio-Visit-green)](https://yashawasthi27.github.io/Portfolio/)
-📧 yashonwork247@gmail.com
+> ### 🪐 **Yash Awasthi**
+> 🧠 *BCA (AI & Data Science)*
+> 
+> [![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://linkedin.com/in/yashawasthi27)
+> [![GitHub](https://img.shields.io/badge/GitHub-Follow-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/yashawasthi27)
+> [![Portfolio](https://img.shields.io/badge/Portfolio-Visit-E34F26?style=for-the-badge&logo=html5&logoColor=white)](https://yashawasthi27.github.io/Portfolio/)
+> 
+> 📡 **Transmission:** [yashonwork247@gmail.com](mailto:yashonwork247@gmail.com)

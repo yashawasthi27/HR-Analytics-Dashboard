@@ -8,7 +8,7 @@
 
 | Property | Detail |
 |----------|--------|
-| **Tool** | PostgreSQL 14+ |
+| **Tool** | PostgreSQL|
 | **Database** | `hr_analytics` |
 | **Table** | `hr_employees` |
 | **Input** | `../data/hr_cleaned.csv` (1,470 rows, 34 columns) |

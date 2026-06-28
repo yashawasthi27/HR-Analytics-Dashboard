@@ -8,7 +8,7 @@
 
 | Property | Detail |
 |----------|--------|
-| **Tool** | Power BI Desktop |
+| **Tool** | Power BI |
 | **File** | `hr_dashboard.pbix` |
 | **Input** | `../data/hr_cleaned.csv` |
 | **Pages** | 3 interactive pages |
