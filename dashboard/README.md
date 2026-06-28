@@ -1,148 +1,146 @@
-# 📊 Power BI Dashboard — HR Analytics
+# 📊 Power BI Dashboard Module: HR Analytics
 
-> This module covers the complete Power BI dashboard built on top of the cleaned HR dataset — including data model, DAX measures, and 3-page interactive report.
-
----
-
-## 🗂️ Data Model — Star Schema
-
-```
-         Dim_AgeGroup
-              │
-Dim_Education─┤
-              │
-         [hr_cleaned]  ←── FACT TABLE (1,470 rows)
-              │
-  Dim_Department
-              │
-         Dim_JobRole
-```
-
-| Table | Type | Rows | Key Column |
-|-------|------|------|-----------|
-| `hr_cleaned` | Fact | 1,470 | — |
-| `Dim_Department` | Dimension | 3 | `DepartmentID` |
-| `Dim_JobRole` | Dimension | 9 | `JobRoleID` |
-| `Dim_AgeGroup` | Dimension | 4 | `AgeGroupID` |
-| `Dim_Education` | Dimension | 6 | `EducationID` |
+> This module details the design architecture, star schema data model, DAX measures, and page layout of the interactive 3-page Power BI dashboard.
 
 ---
 
-## 📐 DAX Measures
+## 🗂️ Star Schema Data Model
 
-All measures are stored in a dedicated `Measures_Table`:
+The data model uses a clean star schema design to ensure high-performing queries, logical relationship mapping, and easy-to-use filter directions.
+
+```mermaid
+flowchart TD
+    %% Nodes
+    Fact[hr_cleaned <br/> <b>Fact Table (1,470 rows)</b>]
+    D1[Dim_AgeGroup <br/> <i>Dimension Table</i>]
+    D2[Dim_Education <br/> <i>Dimension Table</i>]
+    D3[Dim_Department <br/> <i>Dimension Table</i>]
+    D4[Dim_JobRole <br/> <i>Dimension Table</i>]
+
+    %% Relationships
+    D1 -->|AgeGroupID| Fact
+    D2 -->|EducationID| Fact
+    D3 -->|DepartmentID| Fact
+    D4 -->|JobRoleID| Fact
+
+    %% Styling
+    style Fact fill:#ecfdf5,stroke:#10b981,stroke-width:2px,color:#065f46
+    style D1 fill:#f0f9ff,stroke:#0284c7,stroke-width:1px,color:#075985
+    style D2 fill:#f0f9ff,stroke:#0284c7,stroke-width:1px,color:#075985
+    style D3 fill:#f0f9ff,stroke:#0284c7,stroke-width:1px,color:#075985
+    style D4 fill:#f0f9ff,stroke:#0284c7,stroke-width:1px,color:#075985
+```
+
+### Table Metadata & Keys
+
+| Table Name | Type | Record Count | Join / Key Column |
+| :--- | :--- | :--- | :--- |
+| **`hr_cleaned`** | Fact Table | 1,470 rows | — |
+| **`Dim_Department`** | Dimension | 3 rows | `DepartmentID` |
+| **`Dim_JobRole`** | Dimension | 9 rows | `JobRoleID` |
+| **`Dim_AgeGroup`** | Dimension | 4 rows | `AgeGroupID` |
+| **`Dim_Education`** | Dimension | 6 rows | `EducationID` |
+
+---
+
+## 📐 Calculated DAX Measures
+
+All calculations are built in DAX and stored in a dedicated, clean `Measures_Table` for clarity and ease of access:
 
 ```dax
--- Total headcount
+-- Total Headcount
 Total Employees = COUNTROWS(hr_cleaned)
 
--- Total who left
+-- Total who Left
 Total Attrited = SUM(hr_cleaned[Attrition])
 
--- Core KPI
+-- Core HR Attrition KPI
 Attrition Rate % = 
     DIVIDE([Total Attrited], [Total Employees], 0) * 100
 
--- Currently active
+-- Currently Active Headcount
 Active Employees = 
     CALCULATE([Total Employees], hr_cleaned[Attrition] = 0)
 
--- Average salary
+-- Average Monthly Compensation
 Avg Monthly Income = AVERAGE(hr_cleaned[MonthlyIncome])
 
--- Overtime-specific attrition
+-- Overtime Cohort Attrition Rate
 Overtime Attrition Rate % = 
     CALCULATE([Attrition Rate %], hr_cleaned[OverTime] = 1)
 
--- Engagement score
+-- Average Workplace Satisfaction Metric
 Avg Job Satisfaction = AVERAGE(hr_cleaned[JobSatisfaction])
 ```
 
 ---
 
-## 📄 Dashboard Pages
+## 📄 Dashboard Pages & Layout
 
-### Page 1 — Overview
+### 📍 Page 1: HR Overview
 ![Overview](../screenshots/screenshot_page1_overview.jpg)
 
-**Visuals:**
-- 5 KPI Cards — Total Employees, Active Employees, Attrition Rate %, Avg Income, Overtime Attrition Rate %
-- Attrition Rate by Department (horizontal bar chart)
-- Attrition Rate by Age Group (column chart)
-- Job Role-Wise Attrition & Salary Analysis (table with conditional formatting)
-- Overtime Impact on Attrition (donut chart)
-- Attrition Rate by Salary Band (bar chart)
-- Attrition Rate by Job Role (treemap)
-- Department slicer (dropdown)
-
-**Key numbers visible:**
-- Overall attrition: **16.12%**
-- Overtime attrition: **30.53%**
-- Sales Rep attrition: **39.76%**
+*   **KPI Cards (Top Row):** `Total Headcount`, `Active Employees`, `Attrition Rate %` (**16.12%**), `Avg Monthly Income`, `Overtime Attrition Rate %` (**30.53%**).
+*   **Visual Layout:**
+    *   **Attrition by Department** *(Horizontal Bar Chart)*
+    *   **Attrition by Age Group** *(Column Chart)*
+    *   **Overtime Impact on Attrition** *(Donut Chart)*
+    *   **Job Role-Wise Attrition Details** *(Conditional Formatted Grid)*
+    *   **Attrition by Salary Band** *(Bar Chart)*
 
 ---
 
-### Page 2 — Attrition Deep Dive
+### 📍 Page 2: Attrition Deep Dive
 ![Deep Dive](../screenshots/screenshot_page2_attrition_deep_dive.jpg)
 
-**Visuals:**
-- Attrition Rate by Job Role (column chart)
-- Attrition Rate by Gender (donut chart)
-- Attrition Rate by Tenure Bracket (column chart)
-
-**Slicers:**
-- Gender (button slicer)
-- AgeGroup (dropdown)
-- Department (dropdown)
-
-**Dynamic titles:** Show selected filter context (e.g. "Gender Selected: Female")
+*   **Filter Panel (Right/Top):** Slicers for `Gender` (Button style), `AgeGroup` (Dropdown), and `Department` (Dropdown).
+*   **Visual Layout:**
+    *   **Attrition Rate by Job Role** *(Vertical Column Chart)*
+    *   **Attrition Rate by Gender** *(Donut Chart)*
+    *   **Attrition by Tenure Bracket** *(Column Chart)*
+*   **Dynamic Title:** Formatted to display active filter contexts (e.g., *"Gender Selected: Female"*).
 
 ---
 
-### Page 3 — Salary Analysis
+### 📍 Page 3: Salary Analysis
 ![Salary](../screenshots/screenshot_page3_salary_analysis.jpg)
 
-**Visuals:**
-- Avg Monthly Income by Job Role (horizontal bar chart)
-- Avg Monthly Income by Job Level (column chart)
-- Attrition Rate by Job Satisfaction (column chart)
-
-**Slicers:**
-- Gender (button slicer)
-- AgeGroup (dropdown)
-- Department (dropdown)
+*   **Filter Panel:** Slicers for `Gender`, `AgeGroup`, and `Department`.
+*   **Visual Layout:**
+    *   **Avg Monthly Income by Job Role** *(Horizontal Bar Chart)*
+    *   **Avg Monthly Income by Job Level** *(Column Chart)*
+    *   **Attrition Rate by Job Satisfaction** *(Column Chart)*
+*   **Context:** Clearly details the relation between satisfaction, monthly compensation, and attrition risk.
 
 ---
 
-## 🎨 Design Choices
+## 🎨 Theme & UI Design Choices
 
-| Element | Choice | Reason |
-|---------|--------|--------|
-| **Theme color** | Green (#1a6b3c) | Professional, HR-friendly |
-| **Font** | Default Power BI | Clean and readable |
-| **KPI cards** | Top row on all pages | Consistent context across pages |
-| **Page navigation** | Right side buttons | Easy switching between pages |
-| **Slicers** | Dropdown style | Saves canvas space |
-| **Treemap** | Job Role attrition | Shows proportional impact visually |
-
----
-
-## ▶️ How to Open
-
-1. Download and install [Power BI Desktop](https://powerbi.microsoft.com/desktop/) (free)
-2. Open `hr_dashboard.pbix`
-3. If prompted about data source — update path to your local `hr_cleaned.csv`
-4. Click **Refresh** to reload data
+| Design Element | Selection | Business Rationale |
+| :--- | :--- | :--- |
+| **Color Theme** | Forest Green (`#1a6b3c`) | A professional, calming theme optimized for corporate HR dashboards. |
+| **Typography** | Segoe UI / Arial | Standard, clean sans-serif typeface to ensure readability. |
+| **KPI Placement** | Fixed Top Header | Delivers consistent, instant high-level metrics across all screens. |
+| **Slicer Layout** | Dropdown / Button Slicers | Saves valuable dashboard canvas space, maximizing data density. |
+| **Treemaps & Grids**| Conditional Color Gradients | Uses color intensity to direct the viewer’s eye instantly to risk factors. |
 
 ---
 
-## 💡 Dashboard Insights
+## ⚙️ How to Open the Dashboard
 
-**Biggest finding visible on Page 1:**
-Sales Representatives have **39.76% attrition** while earning only **$2,626/month** — the clearest action item for HR leadership.
+1. Download and install [Power BI Desktop](https://powerbi.microsoft.com/desktop/) (free).
+2. Open [`dashboard/hr_dashboard.pbix`](hr_dashboard.pbix).
+3. If prompted with a data source error, click **Transform Data** > **Data Source Settings** and update the path to point to your local copy of [`data/hr_cleaned.csv`](../data/hr_cleaned.csv).
+4. Click **Refresh** to reload.
 
-**Page 2 drill-down:**
-Filtering by Gender = Female + Department = Sales reveals concentrated attrition risk in specific sub-segments.
+---
 
-**Page 3 salary story:**
-Job Level 5 earns **$19.2K** vs Level 1 at **$2.8K** — a 6.8x difference that directly correlates with the attrition patterns seen on Pages 1 and 2.
+## 💡 Key Dashboard Findings
+
+> [!NOTE]
+> **Key Finding 1 (Compensation & Role Risk)**  
+> Sales Representatives experience an attrition rate of **39.76%** while earning an average monthly income of just **$2,626** — representing the highest compensation-related exit cohort in the business.
+
+> [!IMPORTANT]
+> **Key Finding 2 (Overtime Driver)**  
+> Employees who work overtime face an attrition rate of **30.53%** vs. **10.44%** for those who don't. Reducing overtime reliance is critical to retaining personnel.
