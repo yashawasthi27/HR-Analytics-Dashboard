@@ -8,6 +8,8 @@
 
 The data model uses a clean star schema design to ensure high-performing queries, logical relationship mapping, and easy-to-use filter directions.
 
+![Star Schema Data Model](../screenshots/Star_schema.png)
+
 ```mermaid
 flowchart TD
     %% Nodes

@@ -148,6 +148,7 @@ HR-Analytics-Dashboard/
 │   └── README.md                      # Dashboard metrics and design choices
 │
 └── screenshots/
+    ├── Star_schema.png
     ├── screenshot_page1_overview.jpg
     ├── screenshot_page2_attrition_deep_dive.jpg
     └── screenshot_page3_salary_analysis.jpg
