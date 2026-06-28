@@ -4,18 +4,6 @@
 
 ---
 
-## 📋 Overview
-
-| Property | Detail |
-|----------|--------|
-| **Tool** | Python |
-| **Libraries** | Pandas, NumPy, Matplotlib, Seaborn |
-| **Input** | `../data/hr_raw.csv` (1,470 rows, 35 columns) |
-| **Output** | `../data/hr_cleaned.csv` + 7 chart PNGs |
-| **Notebook** | `hr_analysis.ipynb` |
-
----
-
 ## 🔧 Data Cleaning Steps
 
 ### 1. Dropped Useless Columns

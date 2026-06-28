@@ -4,19 +4,6 @@
 
 ---
 
-## 📋 Overview
-
-| Property | Detail |
-|----------|--------|
-| **Tool** | Power BI |
-| **File** | `hr_dashboard.pbix` |
-| **Input** | `../data/hr_cleaned.csv` |
-| **Pages** | 3 interactive pages |
-| **DAX Measures** | 7 custom measures |
-| **Data Model** | Star Schema (1 fact + 4 dimension tables) |
-
----
-
 ## 🗂️ Data Model — Star Schema
 
 ```

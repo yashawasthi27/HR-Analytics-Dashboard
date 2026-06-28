@@ -1,20 +1,6 @@
 # 🗄️ SQL Analysis — PostgreSQL
 
 > This module covers the complete SQL business analysis layer of the HR Analytics project using PostgreSQL.
-
----
-
-## 📋 Overview
-
-| Property | Detail |
-|----------|--------|
-| **Tool** | PostgreSQL|
-| **Database** | `hr_analytics` |
-| **Table** | `hr_employees` |
-| **Input** | `../data/hr_cleaned.csv` (1,470 rows, 34 columns) |
-| **Queries** | 10 business queries |
-| **File** | `hr_analysis.sql` |
-
 ---
 
 ## 🗃️ Database Setup
