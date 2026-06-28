@@ -1,11 +1,15 @@
+<div align="center">
+
 # 📊 HR Analytics & Employee Attrition Dashboard
 
-> **End-to-end data analytics project** — from raw HR data to interactive Power BI dashboard, covering Python, PostgreSQL, and Power BI.
+**An End-to-End Data Analytics Project**  
+*Transforming raw HR attrition data into interactive decision-support systems via Python, PostgreSQL, and Power BI.*
 
-![Python](https://img.shields.io/badge/Python-3.9+-blue?logo=python)
-![PostgreSQL](https://img.shields.io/badge/PostgreSQL-14+-336791?logo=postgresql)
-![PowerBI](https://img.shields.io/badge/Power%20BI-Dashboard-F2C811?logo=powerbi)
-![Status](https://img.shields.io/badge/Status-Complete-brightgreen)
+[![Python](https://img.shields.io/badge/-Python-3776AB?style=for-the-badge&logo=python&logoColor=white)](notebooks/hr_analysis.ipynb)
+[![Power BI](https://img.shields.io/badge/-Power_BI-F2C811?style=for-the-badge&logo=powerbi&logoColor=black)](dashboard/hr_dashboard.pbix)
+[![PostgreSQL](https://img.shields.io/badge/-PostgreSQL-316192?style=for-the-badge&logo=postgresql&logoColor=white)](scripts/hr_analysis.sql)
+
+</div>
 
 ---
 
@@ -158,7 +162,7 @@ CREATE DATABASE hr_analytics;
 ## 👤 Author
 
 **Yash Awasthi**
-BCA (AI & Data Science) — SAGE University, Bhopal
+BCA (AI & Data Science)
 
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-blue)](https://linkedin.com/in/yashawasthi27)
 [![GitHub](https://img.shields.io/badge/GitHub-Follow-black)](https://github.com/yashawasthi27)
