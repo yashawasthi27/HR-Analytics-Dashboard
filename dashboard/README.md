@@ -10,29 +10,6 @@ The data model uses a clean star schema design to ensure high-performing queries
 
 ![Star Schema Data Model](../screenshots/Star_schema.png)
 
-```mermaid
-flowchart TD
-    %% Nodes
-    Fact[hr_cleaned <br/> <b>Fact Table (1,470 rows)</b>]
-    D1[Dim_AgeGroup <br/> <i>Dimension Table</i>]
-    D2[Dim_Education <br/> <i>Dimension Table</i>]
-    D3[Dim_Department <br/> <i>Dimension Table</i>]
-    D4[Dim_JobRole <br/> <i>Dimension Table</i>]
-
-    %% Relationships
-    D1 -->|AgeGroupID| Fact
-    D2 -->|EducationID| Fact
-    D3 -->|DepartmentID| Fact
-    D4 -->|JobRoleID| Fact
-
-    %% Styling
-    style Fact fill:#ecfdf5,stroke:#10b981,stroke-width:2px,color:#065f46
-    style D1 fill:#f0f9ff,stroke:#0284c7,stroke-width:1px,color:#075985
-    style D2 fill:#f0f9ff,stroke:#0284c7,stroke-width:1px,color:#075985
-    style D3 fill:#f0f9ff,stroke:#0284c7,stroke-width:1px,color:#075985
-    style D4 fill:#f0f9ff,stroke:#0284c7,stroke-width:1px,color:#075985
-```
-
 ### Table Metadata & Keys
 
 | Table Name | Type | Record Count | Join / Key Column |

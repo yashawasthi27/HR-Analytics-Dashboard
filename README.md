@@ -92,16 +92,16 @@ Identify the main drivers of employee attrition and build an interactive dashboa
 ## Project Workflow
 
 ```mermaid
-flowchart TD
+graph TD
     %% Define Nodes
-    A[Business Requirement & Objectives]
-    B[Raw IBM HR Dataset]
-    C[Python Data Cleaning & Feature Engineering]
-    D[Exploratory Data Analysis & Visualizations]
-    E[PostgreSQL Query-Based Analysis]
-    F[Power BI Data Modeling & DAX Measures]
-    G[Interactive 3-Page Dashboard]
-    H[Business Insights & Retention Strategy]
+    A["Business Requirement & Objectives"]
+    B["Raw IBM HR Dataset"]
+    C["Python Data Cleaning & Feature Engineering"]
+    D["Exploratory Data Analysis & Visualizations"]
+    E["PostgreSQL Query-Based Analysis"]
+    F["Power BI Data Modeling & DAX Measures"]
+    G["Interactive 3-Page Dashboard"]
+    H["Business Insights & Retention Strategy"]
 
     %% Styling & Layout
     A --> B --> C --> D --> E --> F --> G --> H
