@@ -24,7 +24,7 @@ This project analyzes employee attrition patterns using HR data and converts raw
 - [Repository Structure](#-repository-structure)
 - [Dashboard Preview & Pages](#-dashboard-preview--pages)
 - [Key Business Insights](#-key-business-insights)
-- [Actionable Business Recommendations](#-actionable-business-recommendations)
+- [Business Recommendations](#-business-recommendations)
 - [How to Run This Project](#-how-to-run-this-project)
 - [Sub-Module Documentation](#-sub-module-documentation)
 - [Author](#-author)
@@ -56,7 +56,7 @@ A mid-sized organization is facing an employee attrition rate of approximately *
 
 ### 🎯 Business Goal
 
-Identify the main drivers of employee attrition and build an interactive dashboard for HR leadership to support retention strategy decisions, with a target of reducing attrition from **16% to below 12%**.
+The dashboard helps HR identify high-risk attrition segments and supports retention strategies aimed at reducing attrition risk.
 
 ### 📋 Key Objectives
 
@@ -84,13 +84,12 @@ Identify the main drivers of employee attrition and build an interactive dashboa
 
 ## 🛠️ Tech Stack & Tools
 
-- **Python (Pandas, Numpy)** — Data cleaning, feature engineering, and preprocessing.
-- **Matplotlib & Seaborn** — Exploratory data visualization.
-- **PostgreSQL** — SQL-based business queries and database analysis.
-- **Power BI** — Interactive dashboard development.
-- **DAX (Data Analysis Expressions)** — KPI measures and calculated metrics.
-- **Jupyter Notebook** — Code documentation and interactive analysis.
-- **GitHub** — Project presentation and version control.
+| Tool | Purpose |
+|---|---|
+| Python | Data cleaning, feature engineering, EDA |
+| PostgreSQL | SQL-based business analysis |
+| Power BI | Dashboard, DAX, star schema |
+| GitHub | Project documentation and version control |
 
 ---
 
@@ -198,33 +197,13 @@ _This page analyzes salary distribution, monthly income by job role, salary-base
 
 ---
 
-## 📋 Actionable Business Recommendations
+## 📋 Business Recommendations
 
-Based on the analysis, HR leadership should focus on the following strategic interventions:
-
-> [!WARNING]
->
-> ### 1. Reduce Overtime Dependency
->
-> Overtime is one of the strongest attrition indicators (30% vs 10%). HR should monitor overtime-heavy teams, adjust workloads, and increase headcount where necessary.
-
-> [!IMPORTANT]
->
-> ### 2. Improve Early-Tenure Employee Experience
->
-> Since employees in their first two years show a high exit rate (~30%), the company should strengthen onboarding programs, establish mentorship, and clarify career paths early on.
-
-> [!TIP]
->
-> ### 3. Focus on Young Employee Retention
->
-> Employees aged 18–25 are most likely to leave. HR should introduce continuous learning opportunities, rotation programs, and regular engagement check-ins.
-
-> [!NOTE]
->
-> ### 4. Review Compensation for High-Risk Roles
->
-> Sales Representatives show high attrition and low average income. Compensation benchmarking and restructuring commissions or incentives can help reduce exits.
+1. Reduce overtime load for high-risk job roles, especially Sales Representatives.
+2. Create a structured onboarding and retention plan for employees in their first 2 years.
+3. Review compensation bands for low-income, high-attrition roles.
+4. Track job satisfaction quarterly and flag low-satisfaction employees.
+5. Build targeted retention programs for employees aged 18–25.
 
 ---
 
