@@ -1,13 +1,14 @@
 <div align="center">
 
 # 📊 HR Analytics & Employee Attrition Dashboard
+
 ### 🚀 End-to-End Data Analytics Project using Python, PostgreSQL, and Power BI
 
 This project analyzes employee attrition patterns using HR data and converts raw data into actionable business insights through data cleaning, exploratory analysis, SQL-based investigation, and an interactive Power BI dashboard.
 
 [![Python](https://img.shields.io/badge/-Python-3776AB?style=for-the-badge&logo=python&logoColor=white)](notebooks/hr_analysis.ipynb)
 [![Power BI](https://img.shields.io/badge/-Power_BI-F2C811?style=for-the-badge&logo=powerbi&logoColor=black)](dashboard/hr_dashboard.pbix)
-[![PostgreSQL](https://img.shields.io/badge/-PostgreSQL-316192?style=for-the-badge&logo=postgresql&logoColor=white)](scripts/hr_analysis.sql)
+[![PostgreSQL](https://img.shields.io/badge/-PostgreSQL-316192?style=for-the-badge&logo=postgresql&logoColor=white)](SQL/hr_analysis.sql)
 
 </div>
 
@@ -37,24 +38,28 @@ Employee attrition is one of the most important HR challenges because it directl
 This project uses the IBM HR Analytics Employee Attrition dataset to identify the major factors influencing employee exits. The final output is a 3-page Power BI dashboard that helps HR teams monitor attrition, compare risk segments, and make data-driven retention decisions.
 
 The project covers the complete analytics lifecycle:
-*   **Business problem understanding** & goal definition.
-*   **Data cleaning & preparation** using Python (Pandas).
-*   **Exploratory Data Analysis (EDA)** & visualization (Seaborn/Matplotlib).
-*   **SQL-based business analysis** using PostgreSQL database queries.
-*   **Data modeling, DAX measures, & dashboard creation** in Power BI.
-*   **Insight generation & strategic recommendations** for HR leadership.
+
+- **Business problem understanding** & goal definition.
+- **Data cleaning & preparation** using Python (Pandas).
+- **Exploratory Data Analysis (EDA)** & visualization (Seaborn/Matplotlib).
+- **SQL-based business analysis** using PostgreSQL database queries.
+- **Data modeling, DAX measures, & dashboard creation** in Power BI.
+- **Insight generation & strategic recommendations** for HR leadership.
 
 ---
 
 ## 💼 Business Problem & Objectives
 
 ### 🚨 The Problem
+
 A mid-sized organization is facing an employee attrition rate of approximately **16%**. High attrition increases recruitment costs, reduces team efficiency, and creates knowledge gaps across departments.
 
 ### 🎯 Business Goal
+
 Identify the main drivers of employee attrition and build an interactive dashboard for HR leadership to support retention strategy decisions, with a target of reducing attrition from **16% to below 12%**.
 
 ### 📋 Key Objectives
+
 1. Analyze overall employee attrition trends and KPIs.
 2. Identify high-risk departments, job roles, age groups, and tenure groups.
 3. Understand the impact of overtime, salary, satisfaction, and work-life balance on attrition.
@@ -66,26 +71,26 @@ Identify the main drivers of employee attrition and build an interactive dashboa
 
 ## 📊 Dataset Specifications
 
-| Attribute | Details |
-| :--- | :--- |
-| **Dataset Name** | IBM HR Analytics Employee Attrition Dataset |
-| **Source** | [Kaggle - IBM HR Analytics Attrition Dataset](https://www.kaggle.com/datasets/pavansubhasht/ibm-hr-analytics-attrition-dataset) |
-| **Total Records** | 1,470 employees |
-| **Total Features** | 35 columns |
-| **Target Variable** | Attrition (Yes / No) |
-| **Use Case** | HR analytics, attrition analysis, employee retention strategy |
+| Attribute           | Details                                                                                                                         |
+| :------------------ | :------------------------------------------------------------------------------------------------------------------------------ |
+| **Dataset Name**    | IBM HR Analytics Employee Attrition Dataset                                                                                     |
+| **Source**          | [Kaggle - IBM HR Analytics Attrition Dataset](https://www.kaggle.com/datasets/pavansubhasht/ibm-hr-analytics-attrition-dataset) |
+| **Total Records**   | 1,470 employees                                                                                                                 |
+| **Total Features**  | 35 columns                                                                                                                      |
+| **Target Variable** | Attrition (Yes / No)                                                                                                            |
+| **Use Case**        | HR analytics, attrition analysis, employee retention strategy                                                                   |
 
 ---
 
 ## 🛠️ Tech Stack & Tools
 
-*   **Python (Pandas, Numpy)** — Data cleaning, feature engineering, and preprocessing.
-*   **Matplotlib & Seaborn** — Exploratory data visualization.
-*   **PostgreSQL** — SQL-based business queries and database analysis.
-*   **Power BI** — Interactive dashboard development.
-*   **DAX (Data Analysis Expressions)** — KPI measures and calculated metrics.
-*   **Jupyter Notebook** — Code documentation and interactive analysis.
-*   **GitHub** — Project presentation and version control.
+- **Python (Pandas, Numpy)** — Data cleaning, feature engineering, and preprocessing.
+- **Matplotlib & Seaborn** — Exploratory data visualization.
+- **PostgreSQL** — SQL-based business queries and database analysis.
+- **Power BI** — Interactive dashboard development.
+- **DAX (Data Analysis Expressions)** — KPI measures and calculated metrics.
+- **Jupyter Notebook** — Code documentation and interactive analysis.
+- **GitHub** — Project presentation and version control.
 
 ---
 
@@ -130,7 +135,7 @@ HR-Analytics-Dashboard/
 │   ├── hr_analysis.ipynb              # Jupyter notebook for cleaning & EDA
 │   └── README.md                      # Python cleaning & EDA documentation
 │
-├── scripts/
+├── SQL/
 │   ├── hr_analysis.sql                # PostgreSQL business analysis queries
 │   └── README.md                      # SQL queries and insights documentation
 │
@@ -159,34 +164,37 @@ HR-Analytics-Dashboard/
 ## 🖥️ Dashboard Preview & Pages
 
 ### 📍 Page 1: HR Overview
+
 ![HR Overview](screenshots/screenshot_page1_overview.jpg)
-*This page provides a high-level view of total employees, attrition count, attrition rate, average salary, and overall workforce distribution.*
+_This page provides a high-level view of total employees, attrition count, attrition rate, average salary, and overall workforce distribution._
 
 ---
 
 ### 📍 Page 2: Attrition Deep Dive
+
 ![Attrition Deep Dive](screenshots/screenshot_page2_attrition_deep_dive.jpg)
-*This page focuses on attrition patterns across departments, job roles, age groups, overtime status, satisfaction levels, and tenure groups.*
+_This page focuses on attrition patterns across departments, job roles, age groups, overtime status, satisfaction levels, and tenure groups._
 
 ---
 
 ### 📍 Page 3: Salary Analysis
+
 ![Salary Analysis](screenshots/screenshot_page3_salary_analysis.jpg)
-*This page analyzes salary distribution, monthly income by job role, salary-based attrition risk, and income comparison across employee groups.*
+_This page analyzes salary distribution, monthly income by job role, salary-based attrition risk, and income comparison across employee groups._
 
 ---
 
 ## 💡 Key Business Insights
 
-| # | Insight Area | Key Finding | Attrition Detail |
-|---|---|---|---|
-| **1** | **Department Risk** | **Sales department** has the highest attrition rate. | **~20%** attrition |
-| **2** | **Overtime Impact** | Employees working **overtime** show extremely high attrition. | **30.53%** vs **10%** (3x higher!) |
-| **3** | **Age Group Risk** | Young professionals aged **18–25** show the highest exit rates. | **~34%** attrition |
-| **4** | **Tenure Risk** | Employees in their first **0–2 years** are highly likely to leave. | **29.82%** attrition |
-| **5** | **Salary Impact** | **Sales Representatives** have low monthly income and high exits. | High compensation-related risk |
-| **6** | **Satisfaction** | Employees with low satisfaction have double the attrition rate. | Strong correlation with attrition |
-| **7** | **Gender Pay** | The dataset shows no major average salary gap between genders. | Balanced compensation equity |
+| #     | Insight Area        | Key Finding                                                        | Attrition Detail                   |
+| ----- | ------------------- | ------------------------------------------------------------------ | ---------------------------------- |
+| **1** | **Department Risk** | **Sales department** has the highest attrition rate.               | **~20%** attrition                 |
+| **2** | **Overtime Impact** | Employees working **overtime** show extremely high attrition.      | **30.53%** vs **10%** (3x higher!) |
+| **3** | **Age Group Risk**  | Young professionals aged **18–25** show the highest exit rates.    | **~34%** attrition                 |
+| **4** | **Tenure Risk**     | Employees in their first **0–2 years** are highly likely to leave. | **29.82%** attrition               |
+| **5** | **Salary Impact**   | **Sales Representatives** have low monthly income and high exits.  | High compensation-related risk     |
+| **6** | **Satisfaction**    | Employees with low satisfaction have double the attrition rate.    | Strong correlation with attrition  |
+| **7** | **Gender Pay**      | The dataset shows no major average salary gap between genders.     | Balanced compensation equity       |
 
 ---
 
@@ -195,19 +203,27 @@ HR-Analytics-Dashboard/
 Based on the analysis, HR leadership should focus on the following strategic interventions:
 
 > [!WARNING]
+>
 > ### 1. Reduce Overtime Dependency
+>
 > Overtime is one of the strongest attrition indicators (30% vs 10%). HR should monitor overtime-heavy teams, adjust workloads, and increase headcount where necessary.
 
 > [!IMPORTANT]
+>
 > ### 2. Improve Early-Tenure Employee Experience
+>
 > Since employees in their first two years show a high exit rate (~30%), the company should strengthen onboarding programs, establish mentorship, and clarify career paths early on.
 
 > [!TIP]
+>
 > ### 3. Focus on Young Employee Retention
+>
 > Employees aged 18–25 are most likely to leave. HR should introduce continuous learning opportunities, rotation programs, and regular engagement check-ins.
 
 > [!NOTE]
+>
 > ### 4. Review Compensation for High-Risk Roles
+>
 > Sales Representatives show high attrition and low average income. Compensation benchmarking and restructuring commissions or incentives can help reduce exits.
 
 ---
@@ -215,52 +231,63 @@ Based on the analysis, HR leadership should focus on the following strategic int
 ## ⚙️ How to Run This Project
 
 ### 1. Clone the Repository
+
 ```bash
 git clone https://github.com/yashawasthi27/HR-Analytics-Dashboard.git
 cd HR-Analytics-Dashboard
 ```
 
 ### 2. Run Python Analysis & Data Cleaning
+
 Install required Python libraries:
+
 ```bash
 pip install pandas numpy matplotlib seaborn jupyter
 ```
+
 Launch Jupyter Notebook to view or run the data preparation notebook:
+
 ```bash
 jupyter notebook notebooks/hr_analysis.ipynb
 ```
 
 ### 3. Setup SQL Analysis in PostgreSQL
+
 Create a database in your PostgreSQL instance:
+
 ```sql
 CREATE DATABASE hr_analytics;
 ```
-Import `data/hr_cleaned.csv` into a table and execute the SQL queries located in `scripts/hr_analysis.sql`.
+
+Import `data/hr_cleaned.csv` into a table and execute the SQL queries located in `SQL/hr_analysis.sql`.
 
 ### 4. Open Power BI Dashboard
+
 Open the Power BI file:
+
 ```text
 dashboard/hr_dashboard.pbix
 ```
-*Note: Update the data source path inside Power BI to your local `hr_cleaned.csv` and click **Refresh**.*
+
+_Note: Update the data source path inside Power BI to your local `hr_cleaned.csv` and click **Refresh**._
 
 ---
 
 ## 📖 Sub-Module Documentation
 
-| Module | Purpose / Focus | Documentation Link |
-|---|---|---|
-| 🐍 **Python EDA** | Data cleaning, feature engineering, and exploratory analysis | [notebooks/README.md](notebooks/README.md) |
-| 🗄️ **SQL Analysis** | Business questions solved using PostgreSQL queries | [scripts/README.md](scripts/README.md) |
-| 📊 **Power BI Dashboard** | Dashboard layout, DAX formulas, and design guidelines | [dashboard/README.md](dashboard/README.md) |
+| Module                    | Purpose / Focus                                              | Documentation Link                         |
+| ------------------------- | ------------------------------------------------------------ | ------------------------------------------ |
+| 🐍 **Python EDA**         | Data cleaning, feature engineering, and exploratory analysis | [notebooks/README.md](notebooks/README.md) |
+| 🗄️ **SQL Analysis**       | Business questions solved using PostgreSQL queries           | [SQL/README.md](SQL/README.md)             |
+| 📊 **Power BI Dashboard** | Dashboard layout, DAX formulas, and design guidelines        | [dashboard/README.md](dashboard/README.md) |
 
 ---
 
 ## 👤 Author
 
 **Yash Awasthi**  
-*BCA Student - Artificial Intelligence & Data Science*  
-*Aspiring Data Analyst*
+_BCA Student - Artificial Intelligence & Data Science_  
+_Aspiring Data Analyst_
 
 <p align="left">
   <a href="https://linkedin.com/in/yashawasthi27"><img src="https://img.shields.io/badge/LinkedIn-Connect-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn"></a>
